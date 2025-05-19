@@ -1,0 +1,2 @@
+If a module ends with "Config", then it is supposed to return static data that is not
+dependent on player's actions, progress or states.
