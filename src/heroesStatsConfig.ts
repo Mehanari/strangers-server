@@ -1,9 +1,11 @@
-const baseStats = {
+import {HeroStats} from "./types.ts";
+
+const baseStats: Record<string, HeroStats> = {
     hunter: { hp: 8 },
     knight: { hp: 10 },
 };
 
-export function getStats(heroType, heroLevel) {
+export function getStats(heroType: string, heroLevel: number): HeroStats {
     if (!baseStats[heroType]) {
         throw new Error(`Invalid hero type: ${heroType}`);
     }

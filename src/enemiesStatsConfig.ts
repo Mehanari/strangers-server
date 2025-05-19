@@ -1,11 +1,15 @@
 //This module answers the question "What are stats of the enemy with given type and level?"
 
-const baseStats = {
-    goblin: { hp: 10, damage: 2 },
-    wolf: { hp: 8, damage: 3 },
+import {EnemyStats} from "./types.ts";
+
+const baseStats: Record<string, EnemyStats>  = {
+    'goblin': { hp: 10, damage: 2 },
+    'wolf': { hp: 8, damage: 3 },
 };
 
-export function getStats(enemyType, enemyLevel) {
+
+
+export function getStats(enemyType: string, enemyLevel: number) : EnemyStats {
     if (!baseStats[enemyType]) {
         throw new Error(`Invalid enemy type: ${enemyType}`);
     }
