@@ -5,6 +5,9 @@ import { createEnemy } from "./enemyFactory.ts";
 import { getDeck } from "./deckManager.ts";
 import { createHero } from "./heroFactory.ts";
 import {Raid} from "./types.ts";
+import {getAction} from "./cardsProcessing.ts";
+import {Action} from "./action.ts";
+import {processStatusEffect} from "./statusEffectsProcessing.ts";
 
 const activeRaids : Record<string, Raid> = {};
 const AVAILABLE_CARDS_COUNT = 5;
@@ -90,4 +93,64 @@ export function applyCard(playerId: string, cardNumber: number, heroNumber: numb
     const hero = raid.heroes_team[heroNumber];
     hero.applied_cards.push(card);
     return raid;
+}
+
+export function canAttack(playerId: string){
+    if(!isInRaid(playerId)){
+        return false;
+    }
+}
+
+export function heroesAttack(playerId: string) : {actions: Action[], raid: Raid} {
+    if (!isInRaid(playerId)){
+        throw new Error(`Player ${playerId} is not in game`);
+    }
+    const raid = activeRaids[playerId];
+    const heroes_team = raid.heroes_team;
+    const applied_actions: Action[] = [];
+
+    //For each hero check if their target is undefined or dead (hp < 0)
+    //If yes, pick an arbitrary target with hp > 0
+    for (const hero of heroes_team){
+        if (!hero.target_enemy || hero.target_enemy.hp <= 0){
+            for (const enemy of raid.enemies_team){
+                if (enemy.enemy.hp > 0){
+                    hero.target_enemy = enemy.enemy;
+                    break;
+                }
+            }
+        }
+    }
+
+    //Processing actions of each hero, based on applied cards
+    for (const hero of heroes_team){
+        while (hero.applied_cards.length > 0){
+            const card = hero.applied_cards.pop();
+            //If card is undefined (for whatever reason), skip it
+            if (!card){
+                continue;
+            }
+            const action = getAction(card, hero);
+            applied_actions.push(action);
+            action.apply();
+        }
+    }
+
+    //Process the status effects on enemies and reduce their durations by 1.
+    for (const enemy of raid.enemies_team){
+        for (const effect of enemy.enemy.status_effects){
+            const action = processStatusEffect(enemy.enemy, effect);
+            applied_actions.push(action);
+            action.apply();
+        }
+    }
+    //For each enemy, remove status effects that expired
+    for (const enemy of raid.enemies_team){
+        enemy.enemy.status_effects = enemy.enemy.status_effects.filter(effect => effect.duration > 0);
+    }
+
+    return {
+        actions: applied_actions,
+        raid: raid
+    };
 }
