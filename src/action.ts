@@ -25,7 +25,9 @@ export class DamageEffect extends Effect{
         super();
     }
     apply(entity: Hero | Enemy): void {
-        entity.hp -= this.damage;
+        if (entity.hp > 0){
+            entity.hp -= this.damage;
+        }
     }
 }
 

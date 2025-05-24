@@ -50,5 +50,8 @@ export interface Raid{
         position: Position
     }[],
     heroes_team: Hero[],
-    available_cards: Card[]
+    //Defines what cards are available for current move
+    available_cards: Card[],
+    //Defines what cards can appear in the available cards list
+    player_deck: Card[]
 }

@@ -7,3 +7,7 @@ Action types:
 amber_throw,
 shield_up,
 arrow_shot
+
+Enemies:
+goblin,
+wolf

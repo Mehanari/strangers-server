@@ -1,0 +1,859 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Raid logic holds Win desert raid scenario 1`] = `
+{
+  "enemiesActions": [],
+  "finalState": {
+    "available_cards": [],
+    "enemies_team": [
+      {
+        "enemy": {
+          "damage": 2,
+          "hp": 0,
+          "level": 2,
+          "status_effects": [
+            {
+              "duration": 1,
+              "type": "fire",
+            },
+            {
+              "duration": 1,
+              "type": "fire",
+            },
+            {
+              "duration": 1,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+        "position": {
+          "x": 0,
+          "y": 0,
+        },
+      },
+      {
+        "enemy": {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 2,
+              "type": "fire",
+            },
+            {
+              "duration": 2,
+              "type": "fire",
+            },
+            {
+              "duration": 2,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+        "position": {
+          "x": 1,
+          "y": 0,
+        },
+      },
+      {
+        "enemy": {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+        "position": {
+          "x": 0,
+          "y": 1,
+        },
+      },
+    ],
+    "heroes_team": [
+      {
+        "applied_cards": [],
+        "hp": 6,
+        "level": 1,
+        "name": "hunter",
+        "status_effects": [],
+        "target_enemy": {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      },
+      {
+        "applied_cards": [],
+        "hp": 6,
+        "level": 1,
+        "name": "knight",
+        "status_effects": [],
+        "target_enemy": {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      },
+      {
+        "applied_cards": [],
+        "hp": 8,
+        "level": 1,
+        "name": "hunter",
+        "status_effects": [],
+        "target_enemy": {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      },
+    ],
+    "location_id": "desert",
+    "player_deck": [
+      {
+        "id": "1",
+        "level": 1,
+        "name": "arrow_shot",
+        "type": "attack",
+      },
+      {
+        "id": "2",
+        "level": 1,
+        "name": "arrow_shot",
+        "type": "attack",
+      },
+      {
+        "id": "3",
+        "level": 1,
+        "name": "arrow_shot",
+        "type": "attack",
+      },
+      {
+        "id": "4",
+        "level": 1,
+        "name": "arrow_shot",
+        "type": "attack",
+      },
+      {
+        "id": "5",
+        "level": 1,
+        "name": "arrow_shot",
+        "type": "attack",
+      },
+      {
+        "id": "6",
+        "level": 1,
+        "name": "arrow_shot",
+        "type": "attack",
+      },
+      {
+        "id": "7",
+        "level": 1,
+        "name": "arrow_shot",
+        "type": "attack",
+      },
+      {
+        "id": "8",
+        "level": 1,
+        "name": "arrow_shot",
+        "type": "attack",
+      },
+    ],
+    "player_id": "testPlayer",
+    "raid_id": "testPlayer-desert",
+  },
+  "heroesActions": [
+    Action {
+      "effects": [
+        DamageEffect {
+          "damage": 3,
+        },
+        FireEffect {
+          "duration": 4,
+        },
+      ],
+      "source": {
+        "applied_cards": [],
+        "hp": 6,
+        "level": 1,
+        "name": "hunter",
+        "status_effects": [],
+        "target_enemy": {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      },
+      "targets": [
+        {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      ],
+      "type": "arrow_shot",
+    },
+    Action {
+      "effects": [
+        DamageEffect {
+          "damage": 3,
+        },
+        FireEffect {
+          "duration": 4,
+        },
+      ],
+      "source": {
+        "applied_cards": [],
+        "hp": 6,
+        "level": 1,
+        "name": "knight",
+        "status_effects": [],
+        "target_enemy": {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      },
+      "targets": [
+        {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      ],
+      "type": "arrow_shot",
+    },
+    Action {
+      "effects": [
+        DamageEffect {
+          "damage": 3,
+        },
+        FireEffect {
+          "duration": 4,
+        },
+      ],
+      "source": {
+        "applied_cards": [],
+        "hp": 8,
+        "level": 1,
+        "name": "hunter",
+        "status_effects": [],
+        "target_enemy": {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      },
+      "targets": [
+        {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      ],
+      "type": "arrow_shot",
+    },
+    Action {
+      "effects": [
+        DamageEffect {
+          "damage": 1,
+        },
+      ],
+      "source": {
+        "damage": 2,
+        "hp": 0,
+        "level": 2,
+        "status_effects": [
+          {
+            "duration": 1,
+            "type": "fire",
+          },
+          {
+            "duration": 1,
+            "type": "fire",
+          },
+          {
+            "duration": 1,
+            "type": "fire",
+          },
+        ],
+        "type": "goblin",
+      },
+      "targets": [
+        {
+          "damage": 2,
+          "hp": 0,
+          "level": 2,
+          "status_effects": [
+            {
+              "duration": 1,
+              "type": "fire",
+            },
+            {
+              "duration": 1,
+              "type": "fire",
+            },
+            {
+              "duration": 1,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      ],
+      "type": "burning",
+    },
+    Action {
+      "effects": [
+        DamageEffect {
+          "damage": 1,
+        },
+      ],
+      "source": {
+        "damage": 2,
+        "hp": 0,
+        "level": 2,
+        "status_effects": [
+          {
+            "duration": 1,
+            "type": "fire",
+          },
+          {
+            "duration": 1,
+            "type": "fire",
+          },
+          {
+            "duration": 1,
+            "type": "fire",
+          },
+        ],
+        "type": "goblin",
+      },
+      "targets": [
+        {
+          "damage": 2,
+          "hp": 0,
+          "level": 2,
+          "status_effects": [
+            {
+              "duration": 1,
+              "type": "fire",
+            },
+            {
+              "duration": 1,
+              "type": "fire",
+            },
+            {
+              "duration": 1,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      ],
+      "type": "burning",
+    },
+    Action {
+      "effects": [
+        DamageEffect {
+          "damage": 1,
+        },
+      ],
+      "source": {
+        "damage": 2,
+        "hp": 0,
+        "level": 2,
+        "status_effects": [
+          {
+            "duration": 1,
+            "type": "fire",
+          },
+          {
+            "duration": 1,
+            "type": "fire",
+          },
+          {
+            "duration": 1,
+            "type": "fire",
+          },
+        ],
+        "type": "goblin",
+      },
+      "targets": [
+        {
+          "damage": 2,
+          "hp": 0,
+          "level": 2,
+          "status_effects": [
+            {
+              "duration": 1,
+              "type": "fire",
+            },
+            {
+              "duration": 1,
+              "type": "fire",
+            },
+            {
+              "duration": 1,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      ],
+      "type": "burning",
+    },
+    Action {
+      "effects": [
+        DamageEffect {
+          "damage": 1,
+        },
+      ],
+      "source": {
+        "damage": 2,
+        "hp": 0,
+        "level": 1,
+        "status_effects": [
+          {
+            "duration": 2,
+            "type": "fire",
+          },
+          {
+            "duration": 2,
+            "type": "fire",
+          },
+          {
+            "duration": 2,
+            "type": "fire",
+          },
+        ],
+        "type": "goblin",
+      },
+      "targets": [
+        {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 2,
+              "type": "fire",
+            },
+            {
+              "duration": 2,
+              "type": "fire",
+            },
+            {
+              "duration": 2,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      ],
+      "type": "burning",
+    },
+    Action {
+      "effects": [
+        DamageEffect {
+          "damage": 1,
+        },
+      ],
+      "source": {
+        "damage": 2,
+        "hp": 0,
+        "level": 1,
+        "status_effects": [
+          {
+            "duration": 2,
+            "type": "fire",
+          },
+          {
+            "duration": 2,
+            "type": "fire",
+          },
+          {
+            "duration": 2,
+            "type": "fire",
+          },
+        ],
+        "type": "goblin",
+      },
+      "targets": [
+        {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 2,
+              "type": "fire",
+            },
+            {
+              "duration": 2,
+              "type": "fire",
+            },
+            {
+              "duration": 2,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      ],
+      "type": "burning",
+    },
+    Action {
+      "effects": [
+        DamageEffect {
+          "damage": 1,
+        },
+      ],
+      "source": {
+        "damage": 2,
+        "hp": 0,
+        "level": 1,
+        "status_effects": [
+          {
+            "duration": 2,
+            "type": "fire",
+          },
+          {
+            "duration": 2,
+            "type": "fire",
+          },
+          {
+            "duration": 2,
+            "type": "fire",
+          },
+        ],
+        "type": "goblin",
+      },
+      "targets": [
+        {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 2,
+              "type": "fire",
+            },
+            {
+              "duration": 2,
+              "type": "fire",
+            },
+            {
+              "duration": 2,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      ],
+      "type": "burning",
+    },
+    Action {
+      "effects": [
+        DamageEffect {
+          "damage": 1,
+        },
+      ],
+      "source": {
+        "damage": 2,
+        "hp": 0,
+        "level": 1,
+        "status_effects": [
+          {
+            "duration": 3,
+            "type": "fire",
+          },
+          {
+            "duration": 3,
+            "type": "fire",
+          },
+          {
+            "duration": 3,
+            "type": "fire",
+          },
+        ],
+        "type": "goblin",
+      },
+      "targets": [
+        {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      ],
+      "type": "burning",
+    },
+    Action {
+      "effects": [
+        DamageEffect {
+          "damage": 1,
+        },
+      ],
+      "source": {
+        "damage": 2,
+        "hp": 0,
+        "level": 1,
+        "status_effects": [
+          {
+            "duration": 3,
+            "type": "fire",
+          },
+          {
+            "duration": 3,
+            "type": "fire",
+          },
+          {
+            "duration": 3,
+            "type": "fire",
+          },
+        ],
+        "type": "goblin",
+      },
+      "targets": [
+        {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      ],
+      "type": "burning",
+    },
+    Action {
+      "effects": [
+        DamageEffect {
+          "damage": 1,
+        },
+      ],
+      "source": {
+        "damage": 2,
+        "hp": 0,
+        "level": 1,
+        "status_effects": [
+          {
+            "duration": 3,
+            "type": "fire",
+          },
+          {
+            "duration": 3,
+            "type": "fire",
+          },
+          {
+            "duration": 3,
+            "type": "fire",
+          },
+        ],
+        "type": "goblin",
+      },
+      "targets": [
+        {
+          "damage": 2,
+          "hp": 0,
+          "level": 1,
+          "status_effects": [
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+            {
+              "duration": 3,
+              "type": "fire",
+            },
+          ],
+          "type": "goblin",
+        },
+      ],
+      "type": "burning",
+    },
+  ],
+  "status": "win",
+}
+`;
